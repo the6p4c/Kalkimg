@@ -4,6 +4,9 @@ using System.IO;
 
 namespace Kalkimg {
 	class Utility {
+		public static readonly int MAX_IMAGE_WIDTH = 0x136;
+		public static readonly int MAX_IMAGE_HEIGHT = 0x191;
+
 		public static byte ConvertRange(byte originalStart, byte originalEnd, byte newStart, byte newEnd, byte value) {
 			double scale = (double) (newEnd - newStart) / (originalEnd - originalStart);
 			return (byte) (newStart + ((value - originalStart) * scale));

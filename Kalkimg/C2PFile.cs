@@ -8,7 +8,6 @@ namespace Kalkimg {
 
 		public C2PFile(Bitmap imageToConvert) {
 			byte[] imageData = Utility.BitmapToRGB565Data(imageToConvert);
-
 			byte[] compressedImageData = Utility.Compress(imageData);
 
 			byte[] header = GetHeader(compressedImageData.Length, imageToConvert.Width, imageToConvert.Height);
