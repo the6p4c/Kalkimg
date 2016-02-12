@@ -10,6 +10,8 @@ namespace Kalkimg {
 		private Bitmap currentImageOriginal;
 		private Bitmap currentImageTransformed;
 
+		private string openedFileName;
+
 		public FormMain() {
 			InitializeComponent();
 		}
@@ -26,6 +28,8 @@ namespace Kalkimg {
 
 		private void loadImage_Click(object sender, EventArgs e) {
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
+				openedFileName = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
+
 				currentImageOriginal = (Bitmap) Image.FromFile(openFileDialog.FileName);
 
 				bool imageSmallerThanMax = currentImageOriginal.Width < Utility.MAX_IMAGE_WIDTH && currentImageOriginal.Height < Utility.MAX_IMAGE_HEIGHT;
@@ -43,6 +47,7 @@ namespace Kalkimg {
 				return;
 			}
 
+			saveFileDialog.FileName = openedFileName;
 			if (saveFileDialog.ShowDialog() == DialogResult.OK) {
 				C2PFile c2pFile = new C2PFile(currentImageTransformed);
 

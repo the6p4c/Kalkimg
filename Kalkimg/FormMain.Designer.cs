@@ -31,7 +31,6 @@
 			this.scaleUp = new System.Windows.Forms.CheckBox();
 			this.fullSize = new System.Windows.Forms.CheckBox();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-			this.advancedOptions = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.currentImagePictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -114,24 +113,13 @@
 			// 
 			// saveFileDialog
 			// 
-			this.saveFileDialog.Filter = "C2P Files (*.c2p)|*.c2p";
-			// 
-			// advancedOptions
-			// 
-			this.advancedOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.advancedOptions.Location = new System.Drawing.Point(352, 448);
-			this.advancedOptions.Name = "advancedOptions";
-			this.advancedOptions.Size = new System.Drawing.Size(110, 23);
-			this.advancedOptions.TabIndex = 9;
-			this.advancedOptions.Text = "Advanced Options";
-			this.advancedOptions.UseVisualStyleBackColor = true;
+			this.saveFileDialog.Filter = "C2P Files (*.c2p)|*.c2p|All Files (*.*)|*.*";
 			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(474, 481);
-			this.Controls.Add(this.advancedOptions);
 			this.Controls.Add(this.fullSize);
 			this.Controls.Add(this.scaleUp);
 			this.Controls.Add(this.maintainAspectRatio);
@@ -156,7 +144,6 @@
 		private System.Windows.Forms.CheckBox scaleUp;
 		private System.Windows.Forms.CheckBox fullSize;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;
-		private System.Windows.Forms.Button advancedOptions;
 	}
 }
 
