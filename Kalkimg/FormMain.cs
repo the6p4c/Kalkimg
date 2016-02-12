@@ -17,7 +17,10 @@ namespace Kalkimg {
 		private void RunTransform() {
 			if (currentImageOriginal == null) return;
 
-			currentImageTransformed = ImageTransform.Transform(currentImageOriginal, maintainAspectRatio.Checked, scaleUp.Checked, fullSize.Checked);
+			currentImageTransformed = ImageTransform.Transform(
+				currentImageOriginal,
+				maintainAspectRatio.Checked, scaleUp.Checked, fullSize.Checked
+			);
 			currentImagePictureBox.Image = currentImageTransformed;
 		}
 

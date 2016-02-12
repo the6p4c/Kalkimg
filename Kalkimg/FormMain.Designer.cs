@@ -31,6 +31,7 @@
 			this.scaleUp = new System.Windows.Forms.CheckBox();
 			this.fullSize = new System.Windows.Forms.CheckBox();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+			this.advancedOptions = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.currentImagePictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,9 +45,9 @@
 			this.currentImagePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.currentImagePictureBox.Location = new System.Drawing.Point(12, 39);
+			this.currentImagePictureBox.Location = new System.Drawing.Point(12, 41);
 			this.currentImagePictureBox.Name = "currentImagePictureBox";
-			this.currentImagePictureBox.Size = new System.Drawing.Size(452, 461);
+			this.currentImagePictureBox.Size = new System.Drawing.Size(450, 401);
 			this.currentImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.currentImagePictureBox.TabIndex = 3;
 			this.currentImagePictureBox.TabStop = false;
@@ -73,10 +74,11 @@
 			// 
 			// maintainAspectRatio
 			// 
+			this.maintainAspectRatio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.maintainAspectRatio.AutoSize = true;
 			this.maintainAspectRatio.Checked = true;
 			this.maintainAspectRatio.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.maintainAspectRatio.Location = new System.Drawing.Point(174, 16);
+			this.maintainAspectRatio.Location = new System.Drawing.Point(12, 452);
 			this.maintainAspectRatio.Name = "maintainAspectRatio";
 			this.maintainAspectRatio.Size = new System.Drawing.Size(130, 17);
 			this.maintainAspectRatio.TabIndex = 6;
@@ -86,10 +88,11 @@
 			// 
 			// scaleUp
 			// 
+			this.scaleUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.scaleUp.AutoSize = true;
 			this.scaleUp.Checked = true;
 			this.scaleUp.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.scaleUp.Location = new System.Drawing.Point(310, 16);
+			this.scaleUp.Location = new System.Drawing.Point(148, 452);
 			this.scaleUp.Name = "scaleUp";
 			this.scaleUp.Size = new System.Drawing.Size(70, 17);
 			this.scaleUp.TabIndex = 7;
@@ -99,8 +102,9 @@
 			// 
 			// fullSize
 			// 
+			this.fullSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.fullSize.AutoSize = true;
-			this.fullSize.Location = new System.Drawing.Point(386, 16);
+			this.fullSize.Location = new System.Drawing.Point(224, 452);
 			this.fullSize.Name = "fullSize";
 			this.fullSize.Size = new System.Drawing.Size(65, 17);
 			this.fullSize.TabIndex = 8;
@@ -112,17 +116,29 @@
 			// 
 			this.saveFileDialog.Filter = "C2P Files (*.c2p)|*.c2p";
 			// 
+			// advancedOptions
+			// 
+			this.advancedOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.advancedOptions.Location = new System.Drawing.Point(352, 448);
+			this.advancedOptions.Name = "advancedOptions";
+			this.advancedOptions.Size = new System.Drawing.Size(110, 23);
+			this.advancedOptions.TabIndex = 9;
+			this.advancedOptions.Text = "Advanced Options";
+			this.advancedOptions.UseVisualStyleBackColor = true;
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(476, 512);
+			this.ClientSize = new System.Drawing.Size(474, 481);
+			this.Controls.Add(this.advancedOptions);
 			this.Controls.Add(this.fullSize);
 			this.Controls.Add(this.scaleUp);
 			this.Controls.Add(this.maintainAspectRatio);
 			this.Controls.Add(this.saveImage);
 			this.Controls.Add(this.loadImage);
 			this.Controls.Add(this.currentImagePictureBox);
+			this.MinimumSize = new System.Drawing.Size(490, 520);
 			this.Name = "FormMain";
 			this.Text = "Kalkimg";
 			((System.ComponentModel.ISupportInitialize)(this.currentImagePictureBox)).EndInit();
@@ -140,6 +156,7 @@
 		private System.Windows.Forms.CheckBox scaleUp;
 		private System.Windows.Forms.CheckBox fullSize;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;
+		private System.Windows.Forms.Button advancedOptions;
 	}
 }
 
