@@ -36,7 +36,6 @@
 			// 
 			// openFileDialog
 			// 
-			this.openFileDialog.FileName = "openFileDialog1";
 			this.openFileDialog.Filter = "Image Files (*.png, *.bmp, *.gif, *.jpg, *.jpeg)|*.png;*.bmp;*.gif;*.jpg;*.jpeg|A" +
     "ll Files (*.*)|*.*";
 			// 
